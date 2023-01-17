@@ -9,15 +9,27 @@
     <h1>Variables Html</h1>
     {% comment %} <h2>First name was: {{first_name | lower | capfirst}} and the last name was: {{last_name | lower | capfirst}}</h2>
     <h2>{{some_list}}</h2> {% endcomment %}
+    {% comment %} 
     <ul> 
     {% for item in some_list%}
         <li>{{item}} </li>
     {% endfor %} 
-</ul>
+    </ul>
 <ul> 
     {% for k,v in some_dict.items%}
         <li>{{v}} </li>
     {% endfor %} 
-</ul>
+</ul> {% endcomment %}
+{% comment %} <ul> 
+    {% for item in some_list%}
+        {% if item == 2 %}
+            <li>TWO</li>
+        {% else %}
+            <li>{{item}} </li>
+        {% endif %}
+        
+    {% endfor %} 
+    </ul> {% endcomment %}
+
 </body>
 </html>
